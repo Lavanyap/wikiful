@@ -13,7 +13,8 @@ development:
   adapter: postgresql
   database: wikiful_development
   encoding: unicode
-  user: wikiful / action
+  #user: wikiful / action
+  user: wikiful
   host: localhost
   pool: 5
   timeout: 5000
@@ -27,7 +28,8 @@ test:
   adapter: postgresql
   database: wikiful_test
   encoding: unicode
-  user: wikiful / action
+  #user: wikiful / action
+  user: wikiful
   host: localhost
   pool: 5
   timeout: 5000

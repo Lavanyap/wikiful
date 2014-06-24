@@ -3,7 +3,6 @@ class CreateArticleCategories < ActiveRecord::Migration
     create_table :article_categories do |t|
     	t.belongs_to :article
     	t.belongs_to :category
-
       t.timestamps
     end
   end
