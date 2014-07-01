@@ -21,32 +21,32 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="span9">
+    <div id="box1" class="span9" style="height:800px; overflow:auto; margin-left: 30px; padding-top:20px;">
     	<%= yield %>
     </div>
     <div class="span3">
-    <div class="span3 sidebar">
-  <div class="my-wiki-site">
-    <h4>My Wikiful</h4>
-    <ul>
-      <li><%= link_to "Write a Wiki", new_article_path %></li>
-    </ul>
+      <div class="span3 sidebar">
+        <div class="my-wiki-site">
+          <h4>My Wikiful</h4>
+          <ul>
+            <li><%= link_to "Write a Wiki", new_article_path %></li>
+          </ul>
+        </div>
+        <div class="categories-sidebar">
+          <h4>Categories</h4>
+            <ul>
+              <% @categories.each do |category| %>
+                <li><%= link_to category.name, category %></li>
+              <% end %>
+            </ul>
+        </div>
+        <div class="about">
+          <h4>About Wikiful</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto earum neque perspiciatis quia animi debitis quod repellat vitae explicabo. Sapiente aliquam reprehenderit id vitae atque ducimus facere molestias soluta?</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="categories-sidebar">
-    <h4>Categories</h4>
-    <ul>
-      <% @categories.each do |category| %>
-        <li><%= link_to category.name, category %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="about">
-    <h4>About Wikiful</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto earum neque perspiciatis quia animi debitis quod repellat vitae explicabo. Sapiente aliquam reprehenderit id vitae atque ducimus facere molestias soluta?</p>
-  </div>
-</div>
-  </div>
-</div>
 </div>
 
 
