@@ -1,14 +1,37 @@
-<html>
-<h1> This is the index view for Articles</h1>
-<% @articles.each do |article| %>
-  <div>
-    <h3><%= link_to article.title, article %></h3>
-          <p>Published on <%= article.created_at.strftime('%b %d, %Y') %></p>
-    <p>Filed under: <% article.categories.each do |category| %>
+<head>
+	<style type ="text/css">
+.color1{
+	font color: #CCCCCC;
+}
+</style>
+</head>
+<body>
+<div>
+<h1> List of Articles</h1>
+</div>
+
+	<table class="table table-striped">
+	<tr>
+		<th>Title</th>
+		<th>Published date</th>
+		<th>Category</th>
+		<th>Content</th>
+	</tr>
+
+	<% @articles.each do |article| %>
+  	<tr>
+  		<td><h5><%= link_to article.title, article %></h5></td>
+        <td class="color1"><p><%= article.created_at.strftime('%b %d, %Y') %></p></td>
+    	<td><p><% article.categories.each do |category| %>
                       <%= link_to category.name, category %>
-                    <% end %>
-    </p>
-    <p><%= truncate(article.content, length: 200) %></p>
-  </div>
-<% end %>
-</html>
+                 <% end %></p></td>
+    	<td class="color1"><p><%= truncate(article.content, length: 200) %></p></td>
+    </tr>
+  
+	<% end %>
+
+</table>
+</body>
+
+
+
