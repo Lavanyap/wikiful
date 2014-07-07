@@ -1,4 +1,9 @@
-
+.span9{
+	height:800px;
+	overflow:auto;
+	margin-left: 30px;
+	padding-top:20px;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
